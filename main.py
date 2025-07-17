@@ -13,6 +13,7 @@ Sacred Geometry Implementation:
 - Fractal: Self-similar endpoint patterns across all API routes
 """
 
+import math
 import sys
 import time
 from datetime import datetime, timedelta
@@ -104,7 +105,7 @@ except ImportError as import_error:
 
 
 # Sacred Geometry constants
-PHI = 1.618033988749895  # Golden Ratio
+PHI = (1 + math.sqrt(5)) / 2
 PHI_SQUARED = PHI * PHI  # φ² for advanced calculations
 PHI_CUBED = PHI_SQUARED * PHI  # φ³ for priority calculations
 

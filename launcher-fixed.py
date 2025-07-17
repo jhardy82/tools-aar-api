@@ -7,6 +7,7 @@ This script launches the complete AAR API server with proper error handling
 and dependency management.
 """
 
+import math
 import subprocess
 import sys
 from pathlib import Path
@@ -16,7 +17,7 @@ modules_path = Path(__file__).parent.parent / "modules"
 sys.path.insert(0, str(modules_path))
 
 # Sacred Geometry constants
-PHI = 1.618033988749895
+PHI = (1 + math.sqrt(5)) / 2
 
 
 def install_dependencies():

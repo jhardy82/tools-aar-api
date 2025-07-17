@@ -1,5 +1,6 @@
 """AAR System API Endpoints"""
 
+import math
 import time
 from datetime import timedelta
 from typing import Any, Dict, List, Optional
@@ -16,7 +17,7 @@ from .models import (
 
 # Constants
 JWT_ACCESS_TOKEN_EXPIRE_MINUTES = 30
-PHI = 1.618033988749895
+PHI = (1 + math.sqrt(5)) / 2
 
 # Create API router
 router = APIRouter()
@@ -111,7 +112,7 @@ async def list_plugins(token_data: Dict[str, Any] = Depends(verify_token)):
             version="1.0.0",
             description="Authentication plugin",
             author="AAR System",
-            sacred_geometry_score=1.618,
+            sacred_geometry_score=PHI,
             loaded=True,
             performance_metrics={},
         )
@@ -131,5 +132,5 @@ async def execute_plugin(
         success=True,
         result={"message": f"Executed {plugin_name}"},
         execution_time=0.618,
-        sacred_geometry_score=1.618,
+        sacred_geometry_score=PHI,
     )

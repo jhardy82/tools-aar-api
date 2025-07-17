@@ -6,6 +6,7 @@ This module implements WebSocket endpoints for real-time communication
 with Sacred Geometry principles for optimal data streaming.
 """
 
+import math
 import asyncio
 
 # Add modules path for AAR system integration
@@ -58,7 +59,7 @@ except ImportError:
 
 
 # Sacred Geometry constants
-PHI = 1.618033988749895  # Golden Ratio
+PHI = (1 + math.sqrt(5)) / 2
 logger = get_safe_logger(__name__)
 
 # Create WebSocket router

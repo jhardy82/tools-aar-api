@@ -63,7 +63,7 @@ def test_constants_validation():
 
         # Check that PHI is properly defined
         assert hasattr(main, "PHI")
-        assert abs(main.PHI - 1.618033988749895) < 1e-10
+        assert abs(main.PHI - PHI) < 1e-10
 
         # Check that PHI_SQUARED and PHI_CUBED are defined
         assert hasattr(main, "PHI_SQUARED")
